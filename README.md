@@ -9,7 +9,7 @@ This repository will be renamed as "scSensitiveGeneDefine"
 ## Description:
 `scSensitiveGeneDefine` is an R package that define the sensitive genes in single-cell RNA sequencing data.
 
-`scSensitiveGeneDefine` is build based on Seurat >= 3.0.1(https://satijalab.org/seurat/) and DoubletFinder >= 2.0.3 (https://github.com/chris-mcginnis-ucsf/DoubletFinder) and entropy>=1.2.1; All of these three packages are R package.
+`scSensitiveGeneDefine` is build based on Seurat(>= 3.0.1)(https://satijalab.org/seurat/); DoubletFinder(>= 2.0.3) (https://github.com/chris-mcginnis-ucsf/DoubletFinder); dplyr (>=1.0.0); entropy(>=1.2.1); All of these three packages are R package.
 
 `scSensitiveGeneDefine` intend to publish on BMC Bioinformatics.
 
