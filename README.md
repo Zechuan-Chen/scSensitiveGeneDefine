@@ -1,4 +1,4 @@
-﻿# scSensitiveGeneDefine
+# scSensitiveGeneDefine
 
 ---
 ## **Attention:** 
@@ -7,14 +7,14 @@ All the code has been integrated into the R packages "scSensitiveGeneDefine";
 This repository will be renamed as "scSensitiveGeneDefine"
 
 ## Description:
-`scSensitiveGeneDefine` is an R package that define the sensitive genes in single-cell RNA sequencing data.
+`scSensitiveGeneDefine` is a R package that define the sensitive genes in single-cell RNA sequencing data.
 
-`scSensitiveGeneDefine` is build based on Seurat(>= 3.0.1)(https://satijalab.org/seurat/); DoubletFinder(>= 2.0.3) (https://github.com/chris-mcginnis-ucsf/DoubletFinder); dplyr (>=1.0.0); entropy(>=1.2.1); All of these three packages are R package.
+`scSensitiveGeneDefine` is build based on Seurat(>= 3.0.1)(https://satijalab.org/seurat/); DoubletFinder(>= 2.0.3)(https://github.com/chris-mcginnis-ucsf/DoubletFinder); entropy>=1.2.1; ;dplyr(>=1.0.0); All of these four dependent packages are R package.
 
 `scSensitiveGeneDefine` intend to publish on BMC Bioinformatics.
 
 ## Installation(in R/Rstudio)
-install_github("Zechuan-Chen/Sensitive-gene-select")
+install_github("Zechuan-Chen/scSensitiveGeneDefine")
 
 ## Dependencies
 `scSensitiveGeneDefine` requires the following R packages:
@@ -26,6 +26,7 @@ install_github("Zechuan-Chen/Sensitive-gene-select")
  - NOTE:The version of these depend packages are temporary.
 
 Example code for `scSensitiveGeneDefine`
+
 ```
 object<-Seurat_Pipline(data.dir="~/outs/filtered_feature_bc_matrix/",
                        sample_name = "scRNA-seq Sample 1",
