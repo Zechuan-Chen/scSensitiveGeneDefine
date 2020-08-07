@@ -21,6 +21,7 @@ install_github("Zechuan-Chen/Sensitive-gene-select")
  - Seurat (>=3.0.1)
  - DoubletFinder (>=2.0.3)
  - entropy (>=1.2.1)
+ - dplyr (>=1.0.0)
  - NOTE:The version of these depend packages are temporary.
 
 Example code for `scSensitiveGeneDefine`
