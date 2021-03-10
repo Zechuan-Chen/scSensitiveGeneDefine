@@ -14,11 +14,7 @@ ReClustering<-function(object,
                        resolution=0.6,
                        algorithm=1
 ){
-  object<- NormalizeData(object,normalization.method = "LogNormalize", scale.factor = 10000)
-  # Feature Selection
-  object <- FindVariableFeatures(object,
-                                 selection.method = "vst",
-                                 nfeatures = 2000)
+ 
   object <- ScaleData(object,features=VariableFeatures(object))
   # demension reduction
   object <- RunPCA(object,npcs =max(PC),verbose = F,features=VariableFeatures(object))
