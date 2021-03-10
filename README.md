@@ -50,7 +50,7 @@ object<-ReClustering(object,PC = 40,resolution = 0.6,algorithm=1)
 ECA_value<-ECA(object,Ground_truth_label = label1,Generated_label = label2)
 ECP_value<-ECP(object,Ground_truth_label = label1,Generated_label = label2)
 ```
-
+Detailed examples can be found in 
 
 
 
