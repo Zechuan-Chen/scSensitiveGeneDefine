@@ -14,6 +14,7 @@ ReSelectVariableFeatures<-function(object,SensitiveGene){
   new_Features<-rownames(matrix)[1:2000]
   object@assays$RNA@meta.features$vst.variable<-FALSE
   object@assays$RNA@meta.features[new_Features,]$vst.variable<-TRUE
+  VariableFeatures(object)<-new_Features
   return(object)
 }
 
