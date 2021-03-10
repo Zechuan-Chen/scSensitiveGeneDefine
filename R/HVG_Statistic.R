@@ -8,6 +8,7 @@
 #' 
 HVG_Statistic<-function(object,First_time_unsupervised_clustering_label="First_time_unsupervised_clustering"){
   require("entropy")
+  require("Seurat")
   Idents(object)<-First_time_unsupervised_clustering_label
   label1<-levels(object) # Unsupervised clustering labels
   subtype_cells<-list() # Each Cluster
