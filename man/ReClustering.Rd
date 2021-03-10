@@ -4,7 +4,7 @@
 \alias{ReClustering}
 \title{Reclustering after removing sensitive genes}
 \usage{
-ReClustering(object, PC = 40, resolution = 0.6)
+ReClustering(object, PC = 40, resolution = 0.6, algorithm = 1)
 }
 \arguments{
 \item{object:}{Seurat object, with HVG_Statistic, GetSensitiveGene and ReSelectVariableFeatures finished}
@@ -12,6 +12,8 @@ ReClustering(object, PC = 40, resolution = 0.6)
 \item{PC:}{Number of PC used for demension reduction and clustering. default:40}
 
 \item{resolution:}{Choose appropriate resolution value to adjust the number of clusters. default:0.6}
+
+\item{algorithm:}{Algorithm for modularity optimization (1 = original Louvain algorithm; 2 = Louvain algorithm with multilevel refinement; 3 = SLM algorithm; 4 = Leiden algorithm). Leiden requires the leidenalg python.}
 }
 \description{
 After removing the sensitive gene, reclusering the single-cell data.

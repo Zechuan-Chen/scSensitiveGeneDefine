@@ -10,7 +10,7 @@ HVG_Statistic(
 )
 }
 \arguments{
-\item{object:}{The seurat object, produced by Seurat_Pipline Function or provided by User}
+\item{object:}{The seurat object, produced by runSeurat Function or provided by User}
 
 \item{First_time_unsupervised_clustering_label:}{The labels of Unsupervised clustering results}
 }
@@ -18,4 +18,9 @@ HVG_Statistic(
 Statistics on the high variable genes in each subclusterd, divided by the First-time unsupervised clustering
 
 Only need to provide the label of First-time unsupervised clustering.
+}
+\examples{
+data(PBMC)
+HVG_Anno<-HVG_Statistic(PBMC,First_time_unsupervised_clustering_label="RNA_snn.0.6")
+
 }

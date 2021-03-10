@@ -9,7 +9,7 @@ ReSelectVariableFeatures(object, SensitiveGene)
 \arguments{
 \item{object:}{Seurat object, with HVG_Statistic and GetSensitiveGene finished}
 
-\item{SensitiveGene:}{SensitiveGene List of the scRNA-seq data}
+\item{SensitiveGene:}{SensitiveGene List of the scRNA-seq data. The sensitive gene can be get by running "GetSensitiveGene"}
 }
 \description{
 Only removing the sensitive genes from the variable features, not transcriptome. In this way, the unsupervised clustering result will be improved with transcript no change.
