@@ -14,7 +14,7 @@ This repository will be renamed as "scSensitiveGeneDefine"
 `scSensitiveGeneDefine` intend to publish on BMC Bioinformatics.
 
 ## Installation(in R/Rstudio)
-install_github("Zechuan-Chen/scSensitiveGeneDefine")
+devtools::install_github("Zechuan-Chen/scSensitiveGeneDefine")
 
 ## Dependencies
 `scSensitiveGeneDefine` requires the following R packages:
@@ -28,21 +28,22 @@ install_github("Zechuan-Chen/scSensitiveGeneDefine")
 Example code for `scSensitiveGeneDefine`
 
 ```
-object<-Seurat_Pipline(data.dir="~/outs/filtered_feature_bc_matrix/",
+object<-runSeurat(data.dir="~/outs/filtered_feature_bc_matrix/",
                        sample_name = "scRNA-seq Sample 1",
                        PC = 40,
                        resolution = 0.6,
                        mt.cut_off = 20,
                        min_nFeature.cut_off = 200,
                        data_type = "Expression_matrix",
-                       filter_doublet = T)
+                       filter_doublet = T,
+					   algorithm=1)
                        
 # The processed object also can be provided by user!
 
 HVG_Anno<-HVG_Statistic(object)
 SensitiveGene<-GetSensitivegene(object,min_nClusters = "Default",HVG_Anno = HVG_Anno)
 object<-ReSelectVariableFeatures(object,SensitiveGene = SensitiveGene)
-object<-ReClustering(object,PC = 40,resolution = 0.6)
+object<-ReClustering(object,PC = 40,resolution = 0.6,algorithm=1)
 
 # Evaluate the clustering result (If you have the grount-truth labels)
 
